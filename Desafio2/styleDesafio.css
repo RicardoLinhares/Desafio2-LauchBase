@@ -1,0 +1,240 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Source+Sans+Pro:wght@700&display=swap";
+
+:root {
+    --color-blue: #12b6c2;
+}
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+
+}
+
+body{
+    background: url(/assets/MountainsOpacity.a4edba24.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color:  rgb(11, 10, 13);
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+header {
+    border-bottom: 1px solid #333;
+    background: rgb(113, 89, 193);
+}
+
+
+.links a {
+    color: white;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: var(--color-blue);
+    transition: color 200ms;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#wrapper {
+    text-align: center;
+}
+
+#wrapper img {
+    margin-top: 20px;
+    border-radius: 50%;
+    height: 250px;
+}
+
+#wrapper h1{
+    font-size: 42px;
+    font-weight: bold;
+}
+
+#wrapper h2 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+
+.lista {
+    top: 400px;
+    position: absolute;
+    background-color: rgba(59, 137, 182, 0.2);
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(146, 146, 146);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.lista ul {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.lista li {
+    font-size: 18px;
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    background: rgb(113, 89, 193);
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+/*=== Conteudo ===*/
+
+.cards {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 20px;
+    bottom: 50px;
+}
+
+.card {
+    margin: 10px;
+    background: url(/assets/FeaturedCardBg.40a7d53e.png);
+    border-radius: 8px;
+    height: 500px;
+    max-width: 500px;
+    text-align: center;
+    cursor: pointer;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(11, 10, 13);
+}
+
+.card a{
+    text-decoration: none;
+}
+
+.card span {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: rgb(207, 204, 216);
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(207, 204, 216);
+}
+
+#starter:hover {
+    transition: all 0.2s ease 0s;
+    padding: 10px;
+    border: 2px solid rgb(113, 89, 193);
+}
+
+#lauchbase:hover {
+    transition: all 0.2s ease 0s;
+    padding: 10px;
+    border: 2px solid rgb(253, 149, 31);
+}
+
+#gostack:hover {
+    transition: all 0.2s ease 0s;
+    padding: 10px;
+    border: 2px solid rgb(4, 211, 97);
+}
+
+.card_image img {
+   max-width: 90%;
+   padding-top: 80px;
+}
+
+.card_info p {
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration: none;
+    margin: 50px auto;
+    width: 275px;
+    font-weight: normal;
+    text-align: center;
+    color: rgb(157, 155, 163);
+    padding: 10px;
+}
+
+#starter strong {
+    color: rgb(113, 89, 193);
+    font-weight: bold;
+}
+
+#lauchbase strong {
+    color: rgb(253, 149, 31);
+    font-weight: bold;
+
+}
+
+#gostack strong {
+    color: rgb(4, 211, 97);
+    font-weight: bold;
+}
+
+
+/*=== MODAL ===*/
+
+.modal-overlay { 
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    top: 0; 
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal { 
+    background-color: white;
+    width: 90%;
+    height: 90%; 
+    margin: 5vh auto; 
+    position: relative; 
+}
+
+.modal .close-modal { 
+    color: black;
+    position: absolute; 
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+/*=== MODAL ACTIVE===*/
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 98%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 1%;
+}
